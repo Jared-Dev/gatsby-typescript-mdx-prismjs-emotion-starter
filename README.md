@@ -1,6 +1,6 @@
 # Gatsby TypeScript MDX Prismjs Starter w/ Emotion
 
-Demo: <https://infallible-brown-28846b.netlify.com/>
+Demo: <https://gatsby-ts-starter.netlify.com/>
 
 ## Origins
 
