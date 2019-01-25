@@ -1,13 +1,17 @@
-# Gatsby TypeScript MDX Prismjs starter
+# Gatsby TypeScript MDX Prismjs Starter w/ Emotion
 
 Demo: <https://infallible-brown-28846b.netlify.com/>
+
+## Origins
+
+This project was forked from Tyler Greulich's [project](https://github.com/tylergreulich/gatsby-typescript-mdx-prismjs-starter) which uses `styled-components` instead of `emotion`. Additionally, it includes the scaffolding for generating a `sitemap.xml`. Beyond that it should be the same!
 
 ## Getting started
 
 Install this by running the following from your CLI:
 
 ```bash
-$ gatsby new my-website https://github.com/tylergreulich/gatsby-typescript-mdx-prismjs-starter
+$ gatsby new my-website https://github.com/Jared-Dev/gatsby-typescript-mdx-prismjs-emotion-starter
 ```
 
 Run `yarn start` to serve your website on <http://localhost:8000>.
@@ -27,5 +31,5 @@ Run `yarn build` to create a static site ready to host from (`/public`)
   - [x] [Typescript](https://www.typescriptlang.org/) / [tslint](https://palantir.github.io/tslint/)
 - [x] SEO
   - [x] [Helmet](https://github.com/nfl/react-helmet)
-- [x] [styled-components](https://www.styled-components.com/) for styling
+- [x] [Emotion](https://emotion.sh/) for styling
 - [x] [Prismjs](https://prismjs.com/) for syntax highlighting in blog posts

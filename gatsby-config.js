@@ -1,8 +1,11 @@
+const gql = require('graphql-tag');
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby-TS-MDX-PrismJs-Starter',
-    description: 'Gatsby-TS-MDX-PrismJs-Starter',
+    title: 'Gatsby-TS-MDX-PrismJs-Emotion-Starter',
+    description: 'Gatsby-TS-MDX-PrismJs-Emotion-Starter',
     keywords: 'One keyword, two keywords',
+    siteUrl: `https://yourdomainhere.com`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -11,7 +14,7 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-transformer-remark',
     'gatsby-image',
-    'gatsby-plugin-styled-components',
+    'gatsby-plugin-emotion',
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-mdx`,
@@ -49,6 +52,32 @@ module.exports = {
         name: 'images',
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        // Exclude specific pages or groups of pages using glob parameters
+        // See: https://github.com/isaacs/minimatch
+        // The example below will exclude the single `path/to/page` and all routes beginning with `category`
+        // exclude: ["/category/*", `/path/to/page`],
+        // query: gql`
+        //   {
+        //     site {
+        //       siteMetadata {
+        //         siteUrl
+        //       }
+        //     }
+
+        //     allSitePage {
+        //       edges {
+        //         node {
+        //           path
+        //         }
+        //       }
+        //     }
+        // }`
+      }
     },
     // {
     //   resolve: `gatsby-plugin-manifest`,
