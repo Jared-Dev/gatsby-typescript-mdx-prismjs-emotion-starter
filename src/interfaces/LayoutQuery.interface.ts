@@ -1,11 +1,11 @@
 interface Site {
-  siteMetadata: {
-    title: string;
-    description: string;
-    keywords: string[];
-  };
-};
+	siteMetadata: {
+		title: string;
+		description: string;
+		keywords: string[];
+	};
+}
 
 export interface LayoutQueryData {
-  site: Site;
-};
+	site: Site;
+}

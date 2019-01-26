@@ -1,42 +1,53 @@
-import * as React from 'react';
-import styled from 'styled-components';
+/** @jsx jsx */
+// HACK: to prevent ts compiler error :/
+// tslint:disable-next-line
+jsx;
+
+import { css, jsx } from '@emotion/core';
 import { Link } from 'gatsby';
 
 import GatsbyLogo from '../images/gatsby-icon.png';
+import { ThemeProps } from './layout';
 
-type HeaderProps = {
-  siteTitle: string;
-};
-
-const HeaderWrapper = styled.div`
-  background: ${props => props.theme.colorPrimary};
-  img {
-    margin-bottom: 0;
-  }
-`;
-
-const HeaderContainer = styled.div`
-  margin: 0 auto;
-  max-width: 96rem;
-  padding: 1rem;
-`;
+interface HeaderProps {
+	siteTitle: string;
+}
 
 const Header: React.FunctionComponent<HeaderProps> = () => (
-  <HeaderWrapper>
-    <HeaderContainer>
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          <img height="100" src={GatsbyLogo} alt="Gatsby Logo" />
-        </Link>
-      </h1>
-    </HeaderContainer>
-  </HeaderWrapper>
+	<div
+		css={(theme: ThemeProps) =>
+			css`
+				background: ${theme.colorPrimary};
+				img {
+					margin-bottom: 0;
+				}
+			`
+		}
+	>
+		<div
+			css={css`
+				margin: 0 auto;
+				max-width: 96rem;
+				padding: 1rem;
+			`}
+		>
+			<h1
+				css={css`
+					margin: 0;
+				`}
+			>
+				<Link
+					to='/'
+					css={css`
+						color: white;
+						text-decoration: none;
+					`}
+				>
+					<img height='100' src={GatsbyLogo} alt='Gatsby Logo' />
+				</Link>
+			</h1>
+		</div>
+	</div>
 );
 
 export default Header;
